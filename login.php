@@ -29,7 +29,8 @@
 
 	    }
 	else {
-	    echo "<br> <br> Ingreso no autorizado jajajaj LOL";
+		header("location:login-formulario.html");
+	    //echo "<br> <br> Ingreso no autorizado jajajaj LOL";
 	}
 
 	}

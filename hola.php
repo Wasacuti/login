@@ -1,5 +1,6 @@
 <?php 
 session_start();
+error_reporting(0);
 $varsesion=$_SESSION['nombre'];
 
 
@@ -43,7 +44,7 @@ Se llama a la función verificar de javascript una vez que haya cargado completa
                                                                 <li ><a href="crearTour.jsp">Crear nuevo tour  </a></li>
                                                 </ul>
 			</li>
-                        <li class="nivel1" ><a href="ListadeTours.jsp">Tours creados</a></li>
+                        <li class="nivel1" ><a href="cerrar.php">Cerrar sesión</a></li>
 
 
 		
