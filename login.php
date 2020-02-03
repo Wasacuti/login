@@ -23,8 +23,10 @@
 	if ($result->num_rows > 0) {
 	    // output data of each row
 	    echo '<br><br> Ingreso satisfactorio';
-	    echo '<a href="hola.html" title="">index</a>';
-	    
+	    session_start();
+	    $_SESSION['nombre']=$nombre;
+	    header("location:hola.php");
+
 	    }
 	else {
 	    echo "<br> <br> Ingreso no autorizado jajajaj LOL";
@@ -36,6 +38,7 @@
 	} catch (\Throwable $th) {
 	    echo("No se pudo conectar: $th");
 	}
+
 
 
 
