@@ -2,7 +2,18 @@
 
 session_start();
 
+
+session_start();
+$varsesion=$_SESSION['nombre'];
+
+
+if ($varsesion==null || $varsesion='' ) {
+echo "no autorizado";
+//    header("location:login-formulario.html");
+die();
+}
+
 session_destroy();
-header("location:login-formulario.html");
+header("location:login-formulario.php");
 
  ?>

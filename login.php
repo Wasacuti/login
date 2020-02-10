@@ -29,8 +29,11 @@
 
 	    }
 	else {
-		header("location:login-formulario.html");
-	    //echo "<br> <br> Ingreso no autorizado jajajaj LOL";
+		$errorLogin="Error al ingresar";
+		include_once('login-formulario.php');
+
+		header("location:login-formulario.php?error=1");
+	   
 	}
 
 	}

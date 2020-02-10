@@ -1,15 +1,4 @@
-<?php 
-session_start();
-$varsesion=$_SESSION['nombre'];
 
-
-if ($varsesion==null || $varsesion='' ) {
-    header("location:login-formulario.html");
-die();
-}
-
-
- ?>
 
 
 <!DOCTYPE html>
@@ -26,7 +15,18 @@ die();
     </head>
     <body>
         <h1 class="text-center">LOGIN</h1>
+<?php 
+if (isset($errorLogin)) {
+  echo "error $errorLogin";
+}
+
+ ?>
+
 <form action="login.php" method="post">
+
+
+
+
 
 <div class="form-group">
   <label for=""></label>
@@ -37,8 +37,17 @@ die();
       <label for=""></label>
       <input type="password" class="form-control" name="txt_pass" id="" placeholder="Password">
     </div>
-<button type="submit" class="btn btn-lg btn-info">Iniciar sesion</button>
 
+    <?php 
+if (isset($_GET['error'])==true) {
+  echo '<p>usuario o clave incorrecta</p>';
+
+}
+
+
+
+ ?>
+<button type="submit" class="btn btn-lg btn-info">Iniciar sesion</button>
 
 
 </form>
