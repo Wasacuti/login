@@ -1,6 +1,5 @@
 
 
-
 <!DOCTYPE html>
 <html lang="">
     <head>
@@ -9,12 +8,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Title Page</title>
 
-        <!-- Bootstrap CSS -->
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="estilos.css">
     </head>
-    <body>
-        <h1 class="text-center">LOGIN</h1>
+    <body class="bg-fondo">
+      
+<section class="container-fluid ">
+  <section class="row justify-content-center">
+<section class="col-12 col-sm-6 col-md-3">
+
 <?php 
 if (isset($errorLogin)) {
   echo "error $errorLogin";
@@ -22,16 +24,16 @@ if (isset($errorLogin)) {
 
  ?>
 
-<form action="login.php" method="post">
+<form action="consulta.php" method="post" class="form-container">
 
 
-
+<h2 class="text-center">LOGIN</h2>
 
 
 <div class="form-group">
   <label for=""></label>
   <input type="text" name="txt_user" id="" class="form-control" placeholder="Username" aria-describedby="helpId">
-  <small id="helpId" class="text-muted">Help text</small>
+  <small id="helpId" class="text-muted"></small>
 </div>
     <div class="form-group">
       <label for=""></label>
@@ -40,17 +42,20 @@ if (isset($errorLogin)) {
 
     <?php 
 if (isset($_GET['error'])==true) {
-  echo '<p>usuario o clave incorrecta</p>';
+  echo '<p>Usuario o clave incorrecta</p>';
 
 }
 
 
 
  ?>
-<button type="submit" class="btn btn-lg btn-info">Iniciar sesion</button>
-
+<button type="submit" class="btn btn-primary btn-block">Iniciar sesión</button>
 
 </form>
+</section>
+</section>
+</section>
+
 
 
 
