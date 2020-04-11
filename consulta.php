@@ -5,7 +5,7 @@ require('conexion.php');
 
 $nombre=$_POST["txt_user"];
 	$pass=$_POST["txt_pass"];
-	$consulta = $conexion->prepare("SELECT * FROM usuarios WHERE user = '$nombre' AND '$pass'");	
+	$consulta = $conexion->prepare("SELECT * FROM usuarios WHERE user = '$nombre' AND pass ='$pass'");	
 $consulta->execute();
 
 $result= $consulta-> fetch();
